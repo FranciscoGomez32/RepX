@@ -47,3 +47,31 @@
 - 4a. El correo no existe o la contraseña es incorrecta: el sistema muestra un mensaje genérico ("Correo o contraseña incorrectos") y no inicia la sesión.
 
 **Postcondición:** El usuario tiene la sesión iniciada y puede acceder a las funciones de la aplicación.
+
+## CU-03: Crear rutina
+
+**Actor:** Usuario
+
+**Descripción:** El usuario crea una rutina de entrenamiento con un nombre y una lista de ejercicios, indicando las series y repeticiones previstas de cada uno.
+
+**Precondición:** El usuario tiene la sesión iniciada.
+
+**Flujo principal:**
+
+1. El usuario pulsa "Crear rutina".
+2. Escribe el nombre de la rutina (por ejemplo, "Pecho y tríceps").
+3. Añade un ejercicio eligiéndolo del catálogo, que puede filtrar por grupo muscular.
+4. Indica las series y las repeticiones previstas para ese ejercicio.
+5. Repite los pasos 3 y 4 para añadir más ejercicios.
+6. Pulsa "Guardar".
+7. El sistema valida los datos, guarda la rutina y la muestra en la lista de rutinas del usuario.
+
+**Flujos alternativos:**
+
+- 7a. El nombre está vacío: el sistema muestra el error y no guarda la rutina.
+- 7b. La rutina no tiene ningún ejercicio: el sistema avisa de que hay que añadir al menos uno y no guarda la rutina.
+- 7c. Las series o repeticiones no son números enteros mayores que cero: el sistema muestra el error y no guarda la rutina.
+- 5a. El usuario se equivoca al añadir un ejercicio: puede quitarlo de la rutina antes de guardar.
+- 6a. El usuario cancela: no se guarda nada y vuelve a la lista de rutinas.
+
+**Postcondición:** La rutina queda guardada en la cuenta del usuario y está disponible para editarla, borrarla o usarla al registrar un entrenamiento.
