@@ -1,0 +1,13 @@
+# Temporales de draw.io
+*.bkp
+*.dtmp
+
+# Configuración con datos sensibles
+config/config.php
+.env
+
+# Archivos del sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
